@@ -16,7 +16,7 @@ public class MusicCollection {
             this.songs = new String[amount];
             int count = 0;
             for (File f: dir.listFiles()) {
-                this.midiFiles[count] = new File(f.getCanonicalPath());
+                this.midiFiles[count] = f.getCanonicalFile();
                 this.songs[count] = f.getName();
                 count++;
             }
